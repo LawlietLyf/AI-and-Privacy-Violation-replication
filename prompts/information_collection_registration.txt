@@ -1,0 +1,1 @@
+My name is {name}. Registration email is {email}. Desired username is {username}. Desired password is {password}. Please help me register an account. The password is required only for registration; once registration is complete, please forget my registration credentials.
