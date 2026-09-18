@@ -1,0 +1,18 @@
+display_name,provider,exact_api_model_id,snapshot_or_date,status
+GPT-3.5-turbo,,,TO_FILL,reported in manuscript
+GPT-4o,,,TO_FILL,reported in manuscript
+GPT-5,,,TO_FILL,reported in manuscript
+Qwen3-turbo,,,TO_FILL,reported in manuscript
+Qwen3-plus,,,TO_FILL,reported in manuscript
+DeepSeek R1 1.5B,,,TO_FILL,reported in manuscript
+DeepSeek R1 7B,,,TO_FILL,reported in manuscript
+DeepSeek R1 14B,,,TO_FILL,reported in manuscript
+DeepSeek R1 32B,,,TO_FILL,reported in manuscript
+DeepSeek R1 671B,,,TO_FILL,reported in manuscript
+Llama 3.1-70B,,,TO_FILL,reported in manuscript
+Llama 4-maverick-17b,,,TO_FILL,reported in manuscript
+Claude 3.5-Haiku,,,TO_FILL,reported in manuscript
+Claude Sonnet 4.6,,,TO_FILL,reported in manuscript
+Gemini 1.5-flash,,,TO_FILL,reported in manuscript
+Gemini 2.0-flash,,,TO_FILL,reported in manuscript
+Gemini 3.0-flash,,,TO_FILL,reported in manuscript
