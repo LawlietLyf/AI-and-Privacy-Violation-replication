@@ -83,7 +83,7 @@ graph export "outputs/fig4c.png", width(2400) replace
 
 clear all
 display "Extended Data Figure 1"
-do "ED 1/code/ED1_plot.do"
+do "ED 1/code/ed1_plot.do"
 graph save "outputs/ed1.gph", replace
 graph export "outputs/ed1.pdf", replace
 graph export "outputs/ed1.png", width(3600) replace
