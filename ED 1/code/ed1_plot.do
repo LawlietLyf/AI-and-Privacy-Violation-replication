@@ -6,7 +6,7 @@ set more off
 capture mkdir "outputs/plot_results"
 capture mkdir "outputs/plot_results/ed1"
 * 1. Preserve quoted explanations, including embedded line breaks.
-import delimited using "ED 1\data\results_rand.csv", varnames(1) stringcols(_all) ///
+import delimited using "ED 1/data/results_rand.csv", varnames(1) stringcols(_all) ///
     bindquote(strict) maxquotedrows(100) clear
 gen long query_id=_n
 destring bonus punish, replace force
