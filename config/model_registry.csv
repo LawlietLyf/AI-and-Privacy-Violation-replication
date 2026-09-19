@@ -1,0 +1,18 @@
+display_name,provider,exact_api_model_id,snapshot_or_date,status
+GPT-3.5-turbo,,,,Set the exact API model ID
+GPT-4o,,,,Set the exact API model ID
+GPT-5,,,,Set the exact API model ID
+Qwen3-turbo,,,,Set the exact API model ID
+Qwen3-plus,,,,Set the exact API model ID
+DeepSeek R1 distilled Qwen 1.5B,,,,Set the exact API model ID
+DeepSeek R1 distilled Qwen 7B,,,,Set the exact API model ID
+DeepSeek R1 distilled Qwen 14B,,,,Set the exact API model ID
+DeepSeek R1 distilled Qwen 32B,,,,Set the exact API model ID
+DeepSeek R1 671B,,,,Set the exact API model ID
+Llama 3.1-70B,,,,Set the exact API model ID
+Llama 4-maverick-17b,,,,Set the exact API model ID
+Claude 3.5-Haiku,,,,Set the exact API model ID
+Claude Sonnet-4.6,,,,Set the exact API model ID
+Gemini 1.5-flash,,,,Set the exact API model ID
+Gemini 2.0-flash,,,,Set the exact API model ID
+Gemini 3.0-flash,,,,Set the exact API model ID
