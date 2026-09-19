@@ -14,7 +14,7 @@ Final analysis panels are also supplied for Fig. 3a–c, ED2 and ED3, allowing r
 
 ## Start with the paper figures
 
-Use **Stata 17 or later**, with **SE/MP for Fig. 4**. Install `grstyle` with `ssc install grstyle`. Fig. 4 has additional dependencies and installation commands in its [README](plot_results/fig4/README.md).
+Use **Stata 17 or later**, with **SE/MP for Fig. 4**. Install `grstyle` with `ssc install grstyle`. Fig. 4 has additional dependencies and installation commands in its [README](plot_results/fig4/README.md). You need to first release the plot_results.zip and follow the steps below:
 
 ```stata
 do plot_results/plot_paper.do
