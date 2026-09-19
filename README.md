@@ -119,6 +119,6 @@ Work on a copy of the package and replace the relevant input file, or edit its `
 
 ### Code availability and scope
 
-The study's model-experiment repository is [AI-and-Privacy-Violation-replication](https://github.com/LawlietLyf/AI-and-Privacy-Violation-replication). This README describes the figure package supplied with the submission. Model experiments and fresh-response estimation workflows are separate from this prepared-data figure runner.
+The study's model-experiment repository is [AI-and-Privacy-Violation-replication](https://github.com/LawlietLyf/AI-and-Privacy-Violation-replication/tree/paper-figure-replication). This README describes the figure package supplied with the submission. Model experiments and fresh-response estimation workflows are separate from this prepared-data figure runner.
 
 `run.do` reads the supplied ED1 responses and runs only the Stata plotter. It does not execute `ED 1/code/privacy_preference.py` or call a model API. That optional Python inference script reads `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` from environment variables; users must also set its output directory and model deployment for their own environment.
