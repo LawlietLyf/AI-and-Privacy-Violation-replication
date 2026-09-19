@@ -60,26 +60,26 @@ graph save "outputs/fig3c.gph", replace
 graph export "outputs/fig3c.pdf", replace
 graph export "outputs/fig3c.png", width(2400) replace
 
-// clear all
-// display "Figure 4a"
-// do "Fig 4/Stata Code/Baseline Regressions -- Nature Submission.do"
-// graph save "outputs/fig4a.gph", replace
-// graph export "outputs/fig4a.pdf", replace
-// graph export "outputs/fig4a.png", width(2400) replace
-//
-// clear all
-// display "Figure 4b"
-// do "Fig 4/Stata Code/Heterogenity Analyses -- Nature Submission.do"
-// graph save "outputs/fig4b.gph", replace
-// graph export "outputs/fig4b.pdf", replace
-// graph export "outputs/fig4b.png", width(2400) replace
-//
-// clear all
-// display "Figure 4c"
-// do "Fig 4/Stata Code/Incident-Level Analyses -- Nature Submission.do"
-// graph save "outputs/fig4c.gph", replace
-// graph export "outputs/fig4c.pdf", replace
-// graph export "outputs/fig4c.png", width(2400) replace
+clear all
+display "Figure 4a"
+do "Fig 4/Stata Code/Baseline Regressions -- Nature Submission.do"
+graph save "outputs/fig4a.gph", replace
+graph export "outputs/fig4a.pdf", replace
+graph export "outputs/fig4a.png", width(2400) replace
+
+clear all
+display "Figure 4b"
+do "Fig 4/Stata Code/Heterogenity Analyses -- Nature Submission.do"
+graph save "outputs/fig4b.gph", replace
+graph export "outputs/fig4b.pdf", replace
+graph export "outputs/fig4b.png", width(2400) replace
+
+clear all
+display "Figure 4c"
+do "Fig 4/Stata Code/Incident-Level Analyses -- Nature Submission.do"
+graph save "outputs/fig4c.gph", replace
+graph export "outputs/fig4c.pdf", replace
+graph export "outputs/fig4c.png", width(2400) replace
 
 clear all
 display "Extended Data Figure 1"
