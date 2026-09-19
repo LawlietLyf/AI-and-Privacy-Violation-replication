@@ -116,6 +116,6 @@ Work on a copy of the package and replace the relevant input file, or edit its `
 
 ### Code availability and scope
 
-The study's model-experiment repository is [AI-and-Privacy-Violation-replication](https://github.com/LawlietLyf/AI-and-Privacy-Violation-replication). This README describes the figure package supplied with the submission; it does not assert that the public repository already contains this local revision. Model experiments and fresh-response estimation workflows are separate from this prepared-data figure runner.
+The study's model-experiment repository is [AI-and-Privacy-Violation-replication](https://github.com/LawlietLyf/AI-and-Privacy-Violation-replication). This README describes the figure package supplied with the submission. Model experiments and fresh-response estimation workflows are separate from this prepared-data figure runner.
 
 The data generation code under `ED 1/` folder is not read or executed by `run.do`. Its standalone Python inference script reads `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` from environment variables; users of that script must also set its output directory and model deployment for their own environment. 
