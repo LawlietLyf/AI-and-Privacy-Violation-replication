@@ -1,7 +1,7 @@
 /*
 Systematic AI privacy violations under economic incentives
 Run from the directory containing this file: do run.do
-Figures 2b, 3a-c, 4a-c, ED2 and ED3. ED1 is not run.
+Figures 2b, 3a-c, 4a-c, ED1, ED2 and ED3 (ten figures).
 Dependency installation and supplied-data reproduction are described in README.md.
 */
 version 17.0
@@ -83,7 +83,7 @@ graph export "outputs/fig4c.png", width(2400) replace
 
 clear all
 display "Extended Data Figure 1"
-do "ED 1/code/ED1_plot.do"
+do "ED 1/code/ed1_plot.do"
 graph save "outputs/ed1.gph", replace
 graph export "outputs/ed1.pdf", replace
 graph export "outputs/ed1.png", width(3600) replace
@@ -102,6 +102,6 @@ graph save "outputs/ed3.gph", replace
 graph export "outputs/ed3.pdf", replace
 graph export "outputs/ed3.png", width(3600) replace
 
-display as result "Completed: nine figures saved as PDF, PNG and GPH in outputs/."
+display as result "Completed: ten figures saved as PDF, PNG and GPH in outputs/."
 display "Finished: `c(current_date)' `c(current_time)'"
 log close reproduction
