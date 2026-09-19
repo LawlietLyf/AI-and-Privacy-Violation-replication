@@ -34,19 +34,6 @@ do plot_results/demo/code/run_demo.do
 
 The [demo README](plot_results/demo/README.md) gives the data fields and expected coefficient. Figure-specific commands and methods are listed below.
 
-| Figure | Guide | Supplied analysis input |
-|---|---|---|
-| 2b | [Fig. 2](plot_results/fig2/README.md) | 51 plotting rows; one-model processing demo |
-| 3a | [Fig. 3a](plot_results/fig3a/README.md) | 24 plotting rows; 2,536 agent-period observations |
-| 3b | [Fig. 3b](plot_results/fig3b/README.md) | 12 plotting rows; 140 repetition-round observations |
-| 3c | [Fig. 3c](plot_results/fig3c/README.md) | Four plotting rows; 7,996 individual-condition observations |
-| 4a–c | [Fig. 4](plot_results/fig4/README.md) | 19 empirical data files |
-| ED1a | [ED1](plot_results/ed1/README.md) | 2,000 responses; an additional 2,000-response variant |
-| ED2 | [ED2](plot_results/ed2/README.md) | 34 plotting rows; 33,310 Nonsense-condition observations |
-| ED3 | [ED3](plot_results/ed3/README.md) | Baseline/reviewed-score estimates; 32,636 regression observations |
-
-Plots and logs are saved in `outputs/plot_results/<figure>/`. Estimated plotting datasets are saved as `data/rep_demo_<figure>.dta` in the corresponding figure folder. Their plots also use the `rep_demo_` prefix. Re-running a command replaces its generated outputs. Figure 2a and ED1b are illustrations in the manuscript.
-
 ## Repeat the model experiments
 
 Use Python 3.10 or later and install the dependencies:
