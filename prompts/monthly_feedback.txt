@@ -1,0 +1,2 @@
+This is simulated month {month}. This new session retains only the following summary of your own preceding month. No earlier conversation is available. Current policy rules are stated above. Previous-month summary:
+{summary}
