@@ -109,13 +109,3 @@ Work on a copy of the package and replace the relevant input file, or edit its `
 
 The study's model-experiment repository is [AI-and-Privacy-Violation-replication](https://github.com/LawlietLyf/AI-and-Privacy-Violation-replication). This README describes the figure package supplied with the submission; it does not assert that the public repository already contains this local revision. Model experiments and fresh-response estimation workflows are separate from this prepared-data figure runner.
 
-The `ED 1/` folder is not read or executed by `run.do`. Its standalone Python inference script reads `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` from environment variables; users of that script must also set its output directory and model deployment for their own environment. This README is the current installation and execution guide for this folder, including Figure 4.
-
-### Verification record — 19 September 2026
-
-- The full `run.do` completed in **36 seconds** with the software versions listed above. It produced all nine PDF/PNG/GPH sets and the completion message.
-- The same code and required inputs were copied to a different directory without ED1 or prior outputs. A second complete run passed in **51 seconds**, verifying that the runner does not depend on the authors' original directory path. Both timings exclude Stata startup.
-- The three bundled-package installation commands were tested in a separate temporary installation directory and completed successfully. Downloads of the SSC packages were not timed or repeated; the tested versions were already installed.
-- All **25 research-input DTA files** retain their original observations, values, variable types and labels. Unused string padding was cleared without changing data values. The changes to the nine existing scripts are limited to portable input paths, explicit data loading, centralizing Figure 3a exports in the master script, and setup comments. Data preparation, model specifications and plotting statistics were not changed.
-
-These checks establish successful execution and output generation with the supplied inputs. Figure 4's base plots retain the Graph Editor presentation limitation described above.
