@@ -27,10 +27,10 @@ These are tested versions, not claims that every other version is incompatible. 
 
 ## 2. Installation
 
-Extract the complete folder, preserving its directory structure. In Stata, change to the directory containing this README and `run.do`:
+Extract the complete folder, preserving its directory structure. Release the `Fig 4.zip`. In Stata, change to the directory containing this README and `run.do`:
 
 ```stata
-cd "C:/your/path/Manual Construct"
+cd "C:/your/path/"
 ```
 
 Replace this example path with your local path. No paths inside the analysis files need editing.
