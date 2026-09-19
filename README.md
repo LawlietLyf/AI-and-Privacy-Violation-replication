@@ -27,10 +27,12 @@ These are tested versions, not claims that every other version is incompatible. 
 
 ## 2. Installation
 
-Extract the complete folder, preserving its directory structure. Release the `Fig 4.zip`. In Stata, change to the directory containing this README and `run.do`:
+Download the `paper-figure-replication` branch using **Code > Download ZIP**, then extract the downloaded archive. Next, extract the included `Fig 4.zip` into the package root, alongside this README and `run.do`. The archive already contains a top-level `Fig 4/` folder: the resulting paths must be `Fig 4/Stata Code/` and `Fig 4/Stata Data/`, not `Fig 4/Fig 4/`.
+
+In Stata, change to the package root:
 
 ```stata
-cd "C:/your/path/"
+cd "C:/path/to/package"
 ```
 
 Replace this example path with your local path. No paths inside the analysis files need editing.
@@ -69,24 +71,24 @@ Typical setup time after Stata itself is installed is approximately **2–5 minu
 
 ## 3. Demonstration using the supplied data
 
-The supplied figure datasets serve as the example data for demonstrating the code. The compact plotting datasets contain 4–51 records each; Figure 4 uses the supplied empirical analysis datasets. The demonstration is the figure reproduction workflow itself. From the package root, after installation:
+The supplied figure datasets serve as the example data for demonstrating the code. The compact DTA plotting datasets contain 4–51 records each; Extended Data Figure 1 uses 2,000 supplied model responses in `ED 1/data/results_rand.csv`. Figure 4 uses the supplied empirical analysis datasets. The demonstration is the figure reproduction workflow itself. From the package root, after installation:
 
 ```stata
 do run.do
 ```
 
-Expected output: the nine figures listed below, each saved as PDF, PNG and GPH, plus `outputs/run.log`. Allow approximately **1–3 minutes** on a normal desktop; verification runs took 36 and 51 seconds, excluding Stata startup. Inputs are unchanged. The next section maps each figure to its script and data and explains how to run the code on other data.
+Expected output: the ten figures listed below, each saved as PDF, PNG and GPH, plus `outputs/run.log`. Allow approximately **1–3 minutes** on a normal desktop; a verification run on 19 September 2026 using Stata 18 on Windows took 33 seconds, excluding Stata startup, with the required dependencies already installed. Inputs are unchanged. The next section maps each figure to its script and data and explains how to run the code on other data.
 
 ## 4. Instructions for use and full reproduction
 
 In a fresh Stata session, set the package root once and run:
 
 ```stata
-cd "C:/your/path/Manual Construct"
+cd "C:/path/to/package"
 do run.do
 ```
 
-Run the entire do-file, rather than selected lines. `run.do` clears data and stored estimates from memory, executes the nine scripts in the order below, and exports each completed graph. Save any unrelated work in your Stata session first. Missing dependencies or a wrong working directory are reported in the command window before a new log is opened. Once analysis starts, Stata stops at any failing command; inspect `outputs/run.log` before using partial outputs. A successful run ends with `Completed: nine figures saved as PDF, PNG and GPH in outputs/.`
+Run the entire do-file, rather than selected lines. `run.do` clears data and stored estimates from memory, executes the ten scripts in the order below, and exports each completed graph. Save any unrelated work in your Stata session first. Missing dependencies or a wrong working directory are reported in the command window before a new log is opened. Once analysis starts, Stata stops at any failing command; inspect `outputs/run.log` before using partial outputs. A successful run ends with `Completed: ten figures saved as PDF, PNG and GPH in outputs/.`
 
 | Output stem in `outputs/` | Script | Input / operation |
 |---|---|---|
@@ -97,12 +99,13 @@ Run the entire do-file, rather than selected lines. `run.do` clears data and sto
 | fig4a | `Fig 4/Stata Code/Baseline Regressions -- Nature Submission.do` | Supplied empirical data: baseline Poisson, IV and OLS models for AI and generative AI |
 | fig4b | `Fig 4/Stata Code/Heterogenity Analyses -- Nature Submission.do` | Supplied empirical data: four heterogeneity analyses |
 | fig4c | `Fig 4/Stata Code/Incident-Level Analyses -- Nature Submission.do` | Supplied empirical data: mean and median privacy costs by AI-intensity group |
+| ed1 | `ED 1/code/ed1_plot.do` | `ED 1/data/results_rand.csv`: 2,000 responses; parses the leading Yes/No answer and plots incentive pairs |
 | ed2 | `ED 2/code/ED2_plot.do` | `ED 2/data/ED2_data.dta`: 34 plotting records |
 | ed3 | `ED 3/code/ED3_plot.do` | `ED 3/data/ed3_data.dta`: 36 plotting records |
 
-For each output stem, the program writes a vector **PDF**, a **PNG** preview and an editable Stata **GPH** file: **27 figure files**, plus `outputs/run.log`. Rerunning replaces those outputs. No input DTA is overwritten. Regression output, sample sizes, warnings, dependency versions and start/end times appear in the log. The program does not create separate regression-table documents. Stata-generated logs can contain local file and installation paths; exclude `outputs/` when distributing the source package. The supplied ZIP excludes this directory.
+For each output stem, the program writes a vector **PDF**, a **PNG** preview and an editable Stata **GPH** file: **30 figure files**, plus `outputs/run.log`. Rerunning replaces those outputs. No input DTA is overwritten. Regression output, sample sizes, warnings, dependency versions and start/end times appear in the log. The program does not create separate regression-table documents. Stata-generated logs can contain local file and installation paths; exclude `outputs/` when distributing the source package. The repository and `Fig 4.zip` exclude this directory.
 
-Allow approximately **1–3 minutes** for the complete run on a normal desktop; the verification timing is reported below. Runtime depends on the machine and the installed dependency versions. Figure 4 requires more computation than redrawing the compact plotting datasets.
+Allow approximately **1–3 minutes** for the complete run on a normal desktop; the verification timing is reported in Section 3. Runtime depends on the machine and the installed dependency versions. Figure 4 requires more computation than redrawing the compact plotting datasets.
 
 The supplied plotting and estimation commands are retained. As documented by the authors for Figure 4, the manuscript's final figure appearance also received visual adjustments in Stata's Graph Editor. The exported GPH files permit these visual edits; this script exports the reproducible base graphs, rather than claiming pixel-identical manuscript layout.
 
@@ -118,4 +121,4 @@ Work on a copy of the package and replace the relevant input file, or edit its `
 
 The study's model-experiment repository is [AI-and-Privacy-Violation-replication](https://github.com/LawlietLyf/AI-and-Privacy-Violation-replication). This README describes the figure package supplied with the submission. Model experiments and fresh-response estimation workflows are separate from this prepared-data figure runner.
 
-The data generation code under `ED 1/` folder is not read or executed by `run.do`. Its standalone Python inference script reads `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` from environment variables; users of that script must also set its output directory and model deployment for their own environment. 
+`run.do` reads the supplied ED1 responses and runs only the Stata plotter. It does not execute `ED 1/code/privacy_preference.py` or call a model API. That optional Python inference script reads `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` from environment variables; users must also set its output directory and model deployment for their own environment.
